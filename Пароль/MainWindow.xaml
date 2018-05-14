@@ -26,5 +26,6 @@
         <TextBlock FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Top" Text="" FontWeight="Bold" Grid.Row="0" Name="Колличество_Строк" Grid.Column="1" Margin="0,70,0,0" />
         <TextBlock FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Top" Text="Структурированный пароль" Grid.Row="2" Grid.Column="2" Margin="0,20,0,0" />
         <TextBlock FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Top" Text="" FontWeight="Bold" Grid.Row="2" Name="Структурированый_пароль" Grid.Column="2" Margin="0,70,0,0" />
+        <Frame Grid.RowSpan="2" Name="Рамка" Visibility="Hidden"/>
     </Grid>
 </Window>
