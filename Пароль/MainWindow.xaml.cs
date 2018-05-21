@@ -24,34 +24,38 @@ namespace Пароль
         {
             InitializeComponent();
         }
-       public String Pass;
+       public String Pass,Log;
    
         
         Методы c = new Методы();
         //Метод выводящий сгенериррованный пароль.
         public void Вывод_Сгенерированного_пароля(object sender, RoutedEventArgs e)
         {
-          
-          
+            Log = Логин.Text;
            Pass= c.генерация_пароля();
             Ваш_пароль.Text = Pass;
            Pass = c.форматирование_пароля(Pass);
             Структурированый_пароль.Text = Pass;
             Колличество_Строк.Text = Pass.Length.ToString();
             Pass = Pass.Remove(0);
-         
-          
         }
         //Проверка пароля и его форматирование.
         private void Проверка_пароля(object sender, RoutedEventArgs e)
         { 
             Pass = Пароль.Text;
-           Pass = c.форматирование_пароля(Pass);
+           if(c.Нижний_регистр(Pass)== true &&c.Верхний_регистр(Pass) == true)
+            {
+                MessageBox.Show("");
+            }
+           
+            Pass = c.форматирование_пароля(Pass);
             Ваш_пароль.Text = Пароль.Text;
             if(Пароль.Text.Length != 0)
             Пароль.Text = Пароль.Text.Remove(0);
             Структурированый_пароль.Text = Pass;
             Колличество_Строк.Text = Pass.Length.ToString();
+            Pass = Pass.Remove(0);
+
         }
     }
 }

@@ -43,7 +43,7 @@ namespace Пароль
             //MainWindow sda = new MainWindow();
 
             MainWindow a = (MainWindow)Window.GetWindow(this);
-            Chart.Series["Series1"].Points.DataBindXY(a.x, a.y);
+           //Chart.Series["Series1"].Points.DataBindXY(a.x, a.y);
 
             Chart.Series["Series1"].Points.AddXY(a.Pass, a.Pass.Length);
         }

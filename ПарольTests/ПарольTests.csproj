@@ -56,8 +56,11 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="Пароль_не_равен_логину.cs" />
     <Compile Include="Генерация_пароляTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="МетодыВерхний_регистр.cs" />
+    <Compile Include="МетодыНижний_регистр.cs" />
     <Compile Include="форматирование_пароляTest.cs" />
   </ItemGroup>
   <ItemGroup>

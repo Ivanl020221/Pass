@@ -17,7 +17,8 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <TextBox Width="150" FontSize="10"  Grid.Row="1" Grid.Column="1" Height="50" Background="AliceBlue" Name="Пароль"/>
+        <TextBox Width="150" FontSize="10"  Grid.Row="1" Grid.Column="1" Height="30" Background="AliceBlue" Name="Пароль"/>
+        <TextBox Width="150" FontSize="10"  Grid.Row="1" Grid.Column="1" VerticalAlignment="Top" Margin="20" Height="30" Background="AliceBlue" Name="Логин"/>
         <Button Width="200" Height="30" Grid.Row="1" Grid.Column="1" Margin="0,100,0,0" Content="Проверить" Name="Кнопка" Click="Проверка_пароля"/>
         <Button Height="30" Width="200" Grid.Column="1" Grid.Row="2" Content="Сгенерировать" Margin="0,10,0,0" VerticalAlignment="Top" Click="Вывод_Сгенерированного_пароля"/>
         <TextBlock FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Top" Text="Ваш пароль | Сгенерированный" Grid.Row="2" Margin="0,20,0,0" />

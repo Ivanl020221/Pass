@@ -44,6 +44,33 @@ namespace Пароль
                 Pass = Pass.Remove(20);
             }
             return (Pass);
+           
+        }
+        public bool Нижний_регистр(string ps)
+        {
+           string Pass = ps;
+            string pass2 = Pass.ToLower();
+            if (Pass == pass2)
+            {
+                return (false);
+            }
+            else
+            {
+                return (true);
+            }
+        }
+        public bool Верхний_регистр(string ps)
+        {
+            string pass = ps;
+            string pass2 = pass.ToUpper();
+            if(pass== pass2)
+            {
+                return (false);
+            }
+            else
+            {
+                return (true);
+            }
         }
     }
 }
