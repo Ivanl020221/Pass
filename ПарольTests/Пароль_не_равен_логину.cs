@@ -7,7 +7,7 @@ namespace ПарольTests
     public class Пароль_не_равен_логину
     {
         [TestMethod]
-        public void Пароль_и_логин_не_совпадают()
+        public void ПарольиЛогин_Проверка_ПеСовпадают()
         { Пароль.MainWindow mainWindow = new Пароль.MainWindow();
             mainWindow.Pass = "Pass";
             string extended_1 = mainWindow.Pass;
