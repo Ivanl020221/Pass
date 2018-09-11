@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Пароль"
+        xmlns:local="clr-namespace:System.Windows.Controls;assembly=PresentationFramework" 
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid Background="#FFB5D5CA">
@@ -17,6 +17,7 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
+        
         <TextBox Width="150" FontSize="10"  Grid.Row="1" Grid.Column="1" Height="30" Background="AliceBlue" Name="Пароль"/>
         <TextBox Width="150" FontSize="10"  Grid.Row="1" Grid.Column="1" VerticalAlignment="Top" Margin="20" Height="30" Background="AliceBlue" Name="Логин"/>
         <Button Width="200" Height="30" Grid.Row="1" Grid.Column="1" Margin="0,100,0,0" Content="Проверить" Name="Кнопка" Click="Проверка_пароля"/>
@@ -27,6 +28,8 @@
         <TextBlock FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Top" Text="" FontWeight="Bold" Grid.Row="0" Name="Колличество_Строк" Grid.Column="1" Margin="0,70,0,0" />
         <TextBlock FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Top" Text="Структурированный пароль" Grid.Row="2" Grid.Column="2" Margin="0,20,0,0" />
         <TextBlock FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Top" Text="" FontWeight="Bold" Grid.Row="2" Name="Структурированый_пароль" Grid.Column="2" Margin="0,70,0,0" />
-        <Frame Grid.RowSpan="2" Name="Рамка" Visibility="Hidden"/>
+        <local:Frame Grid.RowSpan="2" Visibility="Visible" NavigationUIVisibility="Visible" Name="testsa"/>
+
+        <Image Name="test" Grid.Column="2" HorizontalAlignment="Left" Height="130" Margin="132.2,0,0,0" Grid.Row="1" VerticalAlignment="Top" Width="123" Source="Image\400736995.png" />
     </Grid>
 </Window>

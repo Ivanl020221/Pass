@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Text.RegularExpressions;
+using System.IO;
+
 
 namespace Пароль
 {
@@ -23,8 +26,10 @@ namespace Пароль
         public MainWindow()
         {
             InitializeComponent();
+           
+
         }
-       public String Pass,Log;
+        public String Pass,Log;
    
         
         Методы c = new Методы();
@@ -38,6 +43,27 @@ namespace Пароль
             Структурированый_пароль.Text = Pass;
             Колличество_Строк.Text = Pass.Length.ToString();
             Pass = Pass.Remove(0);
+           // string testa = string.Format(@"pack://application:,,,/test/{0}","bf.jpg");
+
+            MessageBox.Show(DateTime.Now.ToString());
+            NavigationService navigationService = NavigationService.GetNavigationService(this);
+            testsa.Navigate(new Uri("Передача_данных.xaml", UriKind.Relative));
+            test.Source = new BitmapImage(new Uri(@"Image526057024.png", UriKind.Relative));
+            Microsoft.Win32.OpenFileDialog openFile = new Microsoft.Win32.OpenFileDialog();
+            MessageBox.Show(openFile.FileName.ToString());
+            openFile.ShowDialog();
+           // MessageBox.Show(openFile.FileName);
+            Random r = new Random();
+            string a = AppDomain.CurrentDomain.BaseDirectory;
+
+          //  MessageBox.Show(System.AppDomain.CurrentDomain.BaseDirectory);
+           // string path = ((BitmapImage)test.Source).UriSource.AbsolutePath;
+           // MessageBox.Show(test.Source.ToString());
+           
+           File.Copy(openFile.FileName, a.Replace(@"bin\Debug\",@"test\") + r.Next() + ".png");
+           
+            
+
         }
         //Проверка пароля и его форматирование.
         private void Проверка_пароля(object sender, RoutedEventArgs e)
@@ -55,7 +81,6 @@ namespace Пароль
             Структурированый_пароль.Text = Pass;
             Колличество_Строк.Text = Pass.Length.ToString();
             Pass = Pass.Remove(0);
-
         }
     }
 }

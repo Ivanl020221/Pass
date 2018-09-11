@@ -30,7 +30,7 @@ namespace Пароль
             Chart.ChartAreas.Add(new ChartArea("Default"));
             Chart.Series.Add(new Series("Series1"));
             Chart.Series["Series1"].ChartArea = "Default";
-            Chart.Series["Series1"].ChartType = SeriesChartType.Line;
+            Chart.Series["Series1"].ChartType = SeriesChartType.FastLine;
         }
       
        public void Вывод(string a, int b)
